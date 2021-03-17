@@ -1,11 +1,11 @@
 package dynamic_programming
 
-import "testing"
+import (
+	"github.com/stretchr/testify/require"
+	"testing"
+)
 
 func TestBinomial(t *testing.T) {
 	res := Binomial(4, 5)
-	if res != 5 {
-		t.Errorf("Binomial was incorrect, got: %d, expected: %d", res, 5)
-	}
-
+	require.Equal(t, res, (int64)(5), "results not match")
 }

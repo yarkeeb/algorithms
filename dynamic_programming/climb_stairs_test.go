@@ -7,7 +7,7 @@ import (
 
 func TestClimbStairs(t *testing.T) {
 	res := ClimbStairs(6)
-	require.Equal(t, res, 6, "results not equal")
+	require.Equal(t, res, 13, "results not equal")
 	res = ClimbStairs(1)
 	require.Equal(t, res, 1, "results not equal")
 	res = ClimbStairs(2)
