@@ -50,17 +50,9 @@ func isValid2(s string) bool {
 	stack := make([]rune, 0)
 	for _, r := range s {
 		switch r {
-		case '(':
-			fallthrough
-		case '[':
-			fallthrough
-		case '{':
+		case '(', '[', '{':
 			stack = append(stack, r)
-		case ')':
-			fallthrough
-		case ']':
-			fallthrough
-		case '}':
+		case ')', ']', '}':
 			if len(stack) > 0 && brackets[stack[len(stack) - 1]] == r {
 				stack = stack[:len(stack) - 1]
 			} else {
